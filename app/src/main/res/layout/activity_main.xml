@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_main"
+        android:layout_width="match_parent"
+        android:layout_height="570dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="100dp"/>
+
+    <EditText
+        android:id="@+id/add_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ADD"/>
+
+    <Button
+        android:id="@+id/ADD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="@string/add"
+        android:enabled="false"
+        app:layout_constraintStart_toEndOf="@+id/add_query"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_main" />
+
+    <EditText
+        android:id="@+id/delete_querry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/DELETE"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_main" />
+
+    <Button
+        android:id="@+id/DELETE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/delete"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_main" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
